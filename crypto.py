@@ -2,7 +2,6 @@
 import requests 
 import json
 import time
-import numpy
 crypto_url = "https://api.cryptonator.com/api/ticker/eth-eur"
 #cryptos = ["btc", "eth"]
 
@@ -13,7 +12,7 @@ def cryptokurs():
 	kurs = float(json.loads(requests.request("GET", crypto_url, headers=headers).text)["ticker"]["price"])
 	return kurs
 kurs = cryptokurs()
-f = open("/home/wolfram/crypto", "w")
+f = open("crypto", "w")
 f.write("kurs = " + str(kurs))
 f.close()
 #file.write(kurs)
