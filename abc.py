@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 import os
-import requests 
+import requests
 import json
 import time
+wallet = 0.07620873
 
 crypto_url = "https://api.cryptonator.com/api/ticker/eth-eur"
 headers = {
@@ -16,10 +17,10 @@ f = open("crypto", "w")
 f.write("kurs = " + str(kurs))
 f.close
 
-os.system('notify-send ' + str(kurs) + '€')
+os.system('notify-send kurs=' + str(format(kurs, '.2f')) + '€ ' + 'wallet=' + str(format(wallet*kurs, '.2f')) + '€')
 
 #while True:
-#	kurs = cryptokurs()
-#	print(kurs)
-#	time.sleep(10)
+    #kurs = cryptokurs()
+    #print(kurs)
+    #time.sleep(10)
 
