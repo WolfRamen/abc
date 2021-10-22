@@ -18,8 +18,8 @@ f.close
 
 os.system('notify-send ' + str(kurs) + '€')
 
-while True:
-	kurs = cryptokurs()
-	print(kurs)
-	time.sleep(10)
+#while True:
+#	kurs = cryptokurs()
+#	print(kurs)
+#	time.sleep(10)
 
